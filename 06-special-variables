@@ -14,3 +14,6 @@ sleep 5 &
 echo "PID of the background commnd running just now:$!"
 wait $!
 echo "Line number:$LINENO"
+echo "script compelted in $SECONDS seconds"
+echo "Random number:$RANDOM"
+echo "status of previous command:$?"
