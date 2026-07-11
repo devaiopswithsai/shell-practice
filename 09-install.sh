@@ -12,7 +12,7 @@ fi
 #echo "I am continiurung"
 
 echo "Isntall mysql"
-dnf intall mysql -y
+dnf install mysql -y
 
 if [ $? -ne 0 ]; then
    echo "installing mysql failed"
