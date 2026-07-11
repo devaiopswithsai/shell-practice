@@ -10,7 +10,7 @@ if [ $USERID -ne 0 ]; then
 fi
 
 #echo "I am continiurung"
-dnf installed mysql
+dnf installed list mysql
 if [ $? -eq 0]; then
   echo "MySQL is already installed SKIPPING"
 else
