@@ -4,7 +4,9 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
    echo "Please run the script with root access"
-else
 
-    echo "I am continiurung"
+
+    
 fi
+
+echo "I am continiurung"
