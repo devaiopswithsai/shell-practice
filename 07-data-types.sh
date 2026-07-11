@@ -11,7 +11,7 @@ echo "sum is $SUM"
 
 ###Array
 
-Course = ("AWS" "AI" "DEVOPS") # index always starts from zero
+Course=("AWS" "AI" "DEVOPS") # index always starts from zero
 
 echo "Coruses are: ${course[@]}"
 echo "First course is : ${course[1]}"
