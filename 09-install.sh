@@ -11,7 +11,8 @@ fi
 
 #echo "I am continiurung"
 dnf list installed  mysql
-if [ $? -eq 0]; then
+
+if [ $? -eq 0 ]; then
   echo "MySQL is already installed SKIPPING"
 else
     echo "Installing mysql"
