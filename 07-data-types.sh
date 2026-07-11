@@ -14,6 +14,6 @@ echo "sum is $SUM"
 Course=("AWS" "AI" "DEVOPS") # index always starts from zero
 
 echo "Coruses are: ${Course[@]}"
-echo "First course is : ${Course[1]}"
-echo "second course is : ${Course[2]}"
-echo "Third course is : ${Course[3]}"
+echo "First course is : ${Course[0]}"
+echo "second course is : ${Course[1]}"
+echo "Third course is : ${Course[2]}"
