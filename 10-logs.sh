@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
-LOG_DIR=/home/ec2-user/shell-logs
+LOG_DIR=/var/log/shell-script/
 LOG_FILE="$LOG_DIR/$0.log"
 
 if [ $USERID -ne 0 ]; then
@@ -15,18 +15,18 @@ fi
 # second arg -> exit code
 VALIDATE() {
     if [ $2 -ne 0 ]; then
-    echo "installing $1 failed"
+    echo "installing $1 failed" | tee -a $LOG_FILE
     exit 1
     else
 
-    echo "installing $1 success"
+    echo "installing $1 success" | tee -a $LOG_FILE
     fi
 }
 #echo "I am continiurung"
 dnf list installed  mysql &>> $LOG_FILE
 
 if [ $? -eq 0 ]; then
-  echo "MySQL is already installed SKIPPING"
+  echo "MySQL is already installed SKIPPING" | tee -a $LOG_FILE
 else
     echo "Installing mysql"
     dnf install mysql -y &>> $LOG_FILE
@@ -37,7 +37,7 @@ fi
 dnf list installed  nginx &>> $LOG_FILE
 
 if [ $? -eq 0 ]; then
-  echo "nginx is already installed SKIPPING"
+  echo "nginx is already installed SKIPPING" | tee -a $LOG_FILE
 else
     echo "Installing nginx"
     dnf install nginx -y &>> $LOG_FILE
