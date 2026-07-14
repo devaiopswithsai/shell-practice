@@ -2,10 +2,10 @@ USERID=$(id -u)
 LOG_DIR=/var/log/shell-script/
 LOG_FILE="$LOG_DIR/$0.log"
 TIME_STAMP=$(date "+%y-%m-%d %H:%M:%S")
-R="\e[31m
-G="\e[32m
-Y="\e[33m
-N="\e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 if [ $USERID -ne 0 ]; then
    echo -e "$R Please run the script with root access $N"
