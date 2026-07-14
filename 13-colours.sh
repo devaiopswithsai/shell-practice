@@ -32,7 +32,7 @@ do
     dnf list installed  $package &>> $LOG_FILE
 
     if [ $? -eq 0 ]; then
-    echo "$TIME_STAMP [ERROR] $package is already installed $Y SKIPPING $N" | tee -a $LOG_FILE
+    echo -e "$TIME_STAMP [ERROR] $package is already installed $Y SKIPPING $N" | tee -a $LOG_FILE
     else
         echo "Installing $package"
         dnf install $package -y &>> $LOG_FILE
